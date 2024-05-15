@@ -46,3 +46,9 @@
 [submodule "pt-v5-claimer/lib/pt-v5-prize-pool"]
 	path = pt-v5-claimer/lib/pt-v5-prize-pool
 	url = https://github.com/GenerationSoftware/pt-v5-prize-pool
+[submodule "pt-v5-tpda-liquidator/lib/pt-v5-liquidator-interfaces"]
+	path = pt-v5-tpda-liquidator/lib/pt-v5-liquidator-interfaces
+	url = https://github.com/GenerationSoftware/pt-v5-liquidator-interfaces
+[submodule "pt-v5-tpda-liquidator/lib/openzeppelin-contracts"]
+	path = pt-v5-tpda-liquidator/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
