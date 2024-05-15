@@ -16,3 +16,15 @@
 [submodule "pt-v5-prize-pool/lib/pt-v5-twab-controller"]
 	path = pt-v5-prize-pool/lib/pt-v5-twab-controller
 	url = https://github.com/generationsoftware/pt-v5-twab-controller
+[submodule "pt-v5-draw-manager/lib/forge-std"]
+	path = pt-v5-draw-manager/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "pt-v5-draw-manager/lib/prb-math"]
+	path = pt-v5-draw-manager/lib/prb-math
+	url = https://github.com/PaulRBerg/prb-math
+[submodule "pt-v5-draw-manager/lib/openzeppelin-contracts"]
+	path = pt-v5-draw-manager/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "pt-v5-draw-manager/lib/pt-v5-prize-pool"]
+	path = pt-v5-draw-manager/lib/pt-v5-prize-pool
+	url = https://github.com/GenerationSoftware/pt-v5-prize-pool
