@@ -52,3 +52,15 @@
 [submodule "pt-v5-tpda-liquidator/lib/openzeppelin-contracts"]
 	path = pt-v5-tpda-liquidator/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "pt-v5-rng-witnet/lib/forge-std"]
+	path = pt-v5-rng-witnet/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "pt-v5-rng-witnet/lib/witnet-solidity-bridge"]
+	path = pt-v5-rng-witnet/lib/witnet-solidity-bridge
+	url = https://github.com/witnet/witnet-solidity-bridge
+[submodule "pt-v5-rng-witnet/lib/solady"]
+	path = pt-v5-rng-witnet/lib/solady
+	url = https://github.com/Vectorized/solady
+[submodule "pt-v5-rng-witnet/lib/pt-v5-draw-manager"]
+	path = pt-v5-rng-witnet/lib/pt-v5-draw-manager
+	url = https://github.com/GenerationSoftware/pt-v5-draw-manager

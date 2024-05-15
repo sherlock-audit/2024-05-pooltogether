@@ -1,0 +1,5 @@
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+pt-v5-draw-manager/=lib/pt-v5-draw-manager/src/
+solady/=lib/solady/src/
+witnet/=lib/witnet-solidity-bridge/contracts/

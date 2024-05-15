@@ -1,0 +1,1 @@
+forge create --private-key $PRIVATE_KEY --constructor-args 0x0123456fbBC59E181D76B6Fe8771953d1953B51a --rpc-url $OPTIMISM_GOERLI_RPC_URL --verify --etherscan-api-key $OPTIMISM_ETHERSCAN_API_KEY RngWitnet
