@@ -64,3 +64,12 @@
 [submodule "pt-v5-rng-witnet/lib/pt-v5-draw-manager"]
 	path = pt-v5-rng-witnet/lib/pt-v5-draw-manager
 	url = https://github.com/GenerationSoftware/pt-v5-draw-manager
+[submodule "pt-v5-twab-controller/lib/forge-std"]
+	path = pt-v5-twab-controller/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "pt-v5-twab-controller/lib/openzeppelin-contracts"]
+	path = pt-v5-twab-controller/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "pt-v5-twab-controller/lib/ring-buffer-lib"]
+	path = pt-v5-twab-controller/lib/ring-buffer-lib
+	url = https://github.com/generationsoftware/ring-buffer-lib
