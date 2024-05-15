@@ -1,0 +1,18 @@
+[submodule "pt-v5-prize-pool/lib/forge-std"]
+	path = pt-v5-prize-pool/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "pt-v5-prize-pool/lib/openzeppelin-contracts"]
+	path = pt-v5-prize-pool/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "pt-v5-prize-pool/lib/prb-math"]
+	path = pt-v5-prize-pool/lib/prb-math
+	url = https://github.com/PaulRBerg/prb-math
+[submodule "pt-v5-prize-pool/lib/ring-buffer-lib"]
+	path = pt-v5-prize-pool/lib/ring-buffer-lib
+	url = https://github.com/GenerationSoftware/ring-buffer-lib
+[submodule "pt-v5-prize-pool/lib/uniform-random-number"]
+	path = pt-v5-prize-pool/lib/uniform-random-number
+	url = https://github.com/generationsoftware/uniform-random-number
+[submodule "pt-v5-prize-pool/lib/pt-v5-twab-controller"]
+	path = pt-v5-prize-pool/lib/pt-v5-twab-controller
+	url = https://github.com/generationsoftware/pt-v5-twab-controller
