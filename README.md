@@ -7,6 +7,92 @@
 
 # Q&A
 
+### Q: On what chains are the smart contracts going to be deployed?
+The contracts are deployed on Optimism and Base.
+
+We also plan on deploying to:
+
+- Arbitrum
+- Ethereum
+- Gnosis
+- Blast
+- Linea
+- Scroll
+- zkSync
+- Avalanche
+- Polygon
+- Zerion
+
+We're interested to know if there will be any issues deploying the code as-is to any of these chains, and whether their opcodes fully support our application.
+___
+
+### Q: If you are integrating tokens, are you allowing only whitelisted tokens to work with the codebase or any complying with the standard? Are they assumed to have certain properties, e.g. be non-reentrant? Are there any types of <a href="https://github.com/d-xo/weird-erc20" target="_blank" rel="noopener noreferrer">weird tokens</a> you want to integrate?
+The protocol supports any standard ERC20 that does not have reentrancy or fee on transfer. USDT is also in scope.
+___
+
+### Q: Are the admins of the protocols your contracts integrate with (if any) TRUSTED or RESTRICTED? If these integrations are trusted, should auditors also assume they are always responsive, for example, are oracles trusted to provide non-stale information, or VRF providers to respond within a designated timeframe?
+The core protocol integration is the random number generator, Witnet. This is a trusted integration and you can assume they are always responsive.
+
+Prize vaults can be created by anyone, and our intention is to encourage them. Under normal conditions, a good actor will use a trustworthy 4626 yield source, the standard PT prize claimer contract, and a standard Liquidation Pair. We want the Sherlock auditors to ensure that the contract behaves as expected.
+
+That being said, prize vaults can be created by anyone. We understand that a bad actor could create a vault and steal all of the yield or prizes, or even use a malicious yield source. We do not expect to prevent that scenario.
+
+We are not gatekeeping prize vault creation; instead the front-ends will curate what vaults are shown.
+___
+
+### Q: Are there any protocol roles? Please list them and provide whether they are TRUSTED or RESTRICTED, or provide a more comprehensive description of what a role can and can't do/impact.
+The only permissioned role in the codebase is the Prize Vault owner. They can create new Prize Vaults permissionlessly. As explained above, we do not expect to gatekeep the creation of new prize vaults. However, we do want the logic of the prize vault to be sound for good actors.
+___
+
+### Q: For permissioned functions, please list all checks and requirements that will be made before calling the function.
+The Prize Vault has four permissioned setters for the claimer, liquidation pair, yield fee percentage, and yield fee recipient.  Each one requires that the caller is the owner of the vault.
+___
+
+### Q: Is the codebase expected to comply with any EIPs? Can there be/are there any deviations from the specification?
+PrizeVaults are expected to strictly comply with the ERC4626 standard.
+___
+
+### Q: Are there any off-chain mechanisms or off-chain procedures for the protocol (keeper bots, arbitrage bots, etc.)?
+There are three bots:
+
+- Draw Bots that take advantage of the two phase dutch auction that is used to trigger the RNG request.
+- Liquidation Bots that swap yield for WETH on the prize vaults
+- Claimer Bots that earn fees by claiming prizes for users
+
+We expect them to be always online.  If they are not then draws may be skipped and prizes may be missed, but no prize vault or prize pool funds should be at risk.
+
+___
+
+### Q: Are there any hardcoded values that you intend to change before (some) deployments?
+No
+___
+
+### Q: If the codebase is to be deployed on an L2, what should be the behavior of the protocol in case of sequencer issues (if applicable)? Should Sherlock assume that the Sequencer won't misbehave, including going offline?
+If the sequencer skips forward in time, it may result in inefficient auctions and missed draws.  The protocol is intended to easily recover from this scenario so Sherlock should assume that the Sequencer won't misbehave.
+___
+
+### Q: Should potential issues, like broken assumptions about function behavior, be reported if they could pose risks in future integrations, even if they might not be an issue in the context of the scope? If yes, can you elaborate on properties/invariants that should hold?
+There will be many custom prize vaults created by various builders in the future (internal to GenerationSoftware and external). The protocol requires that any integrations they create are not be able to manipulate their chances of winning unfairly.
+___
+
+### Q: Please list any known issues/acceptable risks that should not result in a valid finding.
+The Witnet RNG is generated via a RANDAO process, but the result is bridged.  Their next upgrade will make the bridging trustless.
+___
+
+### Q: Please provide links to previous audits (if any).
+https://code4rena.com/reports/2024-03-pooltogether
+https://0xmacro.com/library/audits/pooltogether-1
+https://code4rena.com/reports/2023-08-pooltogether
+https://code4rena.com/reports/2023-07-pooltogether
+https://code4rena.com/reports/2022-12-pooltogether
+___
+
+### Q: Please list any relevant protocol resources.
+https://dev.pooltogether.com
+___
+
+
+
 # Audit scope
 
 
